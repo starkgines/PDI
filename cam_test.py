@@ -48,7 +48,7 @@ def load_model():
     crit = torch.nn.NLLLoss(ignore_index=-1)
     segmentation_module = SegmentationModule(net_encoder, net_decoder, crit)
     segmentation_module.eval()
-    segmentation_module.cuda()
+    #segmentation_module.cuda()
 
     return segmentation_module
 
@@ -66,7 +66,7 @@ def Predictor(pil_image):
     #pil_image = PIL.Image.open('playa-tropical_74190-188.jpg').convert('RGB')
     img_original = numpy.array(pil_image)
     img_data = pil_to_tensor(pil_image)
-    singleton_batch = {'img_data': img_data[None].cuda()}
+    singleton_batch = {'img_data': img_data[None]}
     output_size = img_data.shape[1:]
 
 
