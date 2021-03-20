@@ -23,7 +23,7 @@ Decoder:
 - UPerNet (Pyramid Pooling + FPN head, see [UperNet](https://arxiv.org/abs/1807.10221) for details.)
 
 ## Performance:
-IMPORTANT: The base ResNet in our repository is a customized (different from the one in torchvision). The base models will be automatically downloaded when needed.
+
 
 <table><tbody>
     <th valign="bottom">Architecture</th>
