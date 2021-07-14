@@ -81,7 +81,7 @@ def test(segmentation_module, loader, gpu):
             _, pred = torch.max(scores, dim=1)
             pred = as_numpy(pred.squeeze(0).cpu())
 
-        # visualization
+        # visualization solo para visualizar. 
         visualize_result(
             (batch_data['img_ori'], batch_data['info']),
             pred,
@@ -89,6 +89,8 @@ def test(segmentation_module, loader, gpu):
         )
 
         pbar.update(1)
+        
+        return colors;
 
 
 def main(cfg, gpu):
